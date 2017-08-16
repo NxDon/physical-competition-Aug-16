@@ -3,15 +3,9 @@
 例如：arr = [‘a’, ‘ab’, ‘ed’, ‘da’, ‘a’, ‘ed’, ‘b’];输出：‘a’, ‘ed’
 */
 function findDuplicate(arr) {
-    let result;
-    result = arr.filter((elem,index,array) => {
-        return array.indexOf(elem) !== arr.lastIndexOf(elem);
-    }).filter((elem,index,array)=>{
-        return array.indexOf(elem) == index;
-    });
-
-
-    return result;
+    return arr.filter((elem,index,array) => {
+        return array.indexOf(elem) !== index
+    })
 }
 
 arr = ['a','ab','ed','da','a','ed','b',];
